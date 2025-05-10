@@ -24,6 +24,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
 
@@ -38,6 +39,28 @@ return new class extends Migration
             'user_status_id' => 1,
 
             ],
+            [
+
+            'first_name' => 'Rodeliza',
+            'last_name' => 'La Rosa',
+            'email' => 'rodeliza@gmail.com',
+            'password' => Hash::make('password.123'),
+            'role_id' => 2,
+            'user_status_id' => 1,
+
+            ],
+            [
+
+            'first_name' => 'Rasheed',
+            'middle_name' => 'Paradela',
+            'last_name' => 'Tapales',
+            'email' => 'rasheed@gmail.com',
+            'password' => Hash::make('123.password'),
+            'role_id' => 3,
+            'user_status_id' => 1,
+            
+            ],
+
         ];
 
         foreach($users as $user){

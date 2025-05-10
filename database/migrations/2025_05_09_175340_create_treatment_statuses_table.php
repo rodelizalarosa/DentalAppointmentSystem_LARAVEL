@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Role;
+use App\Models\TreatmentStatus;
 
 return new class extends Migration
 {
@@ -12,20 +12,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('roles', function (Blueprint $table) {
+        Schema::create('treatment_statuses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();
         });
 
-        $roles = [
-            ['name' => 'Admin'],
-            ['name' => 'Patient'],
-            ['name' => 'Dentist'],
+        $treatmentStatuses = [
+            ['name' => 'Pending'],
+            ['name' => 'Ongoing'],
+            ['name' => 'Completed'],
+            ['name' => 'Cancelled'],
         ];
 
-        foreach($roles as $role){
-            Role::create($role);
+        foreach ($treatmentStatuses as $treatmentStatus) {
+            TreatmentStatus::create($treatmentStatus);
         }
     }
 
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('treatment_statuses');
     }
 };

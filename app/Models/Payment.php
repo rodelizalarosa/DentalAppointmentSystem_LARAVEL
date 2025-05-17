@@ -18,7 +18,7 @@ class Payment extends Model
 
     // Relationship with AppointmentService
     public function appointmentService(){
-        return $this->belongsTo(AppointmentService::class);
+        return $this->belongsTo(AppointmentServices::class);
     }
 
     // Relationship with PaymentStatus

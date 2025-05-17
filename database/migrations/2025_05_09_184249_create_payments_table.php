@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('appointment_service_id')->constrained('appointment_services')->onDelete('cascade');
+            $table->foreignId('appointment_id')->constrained()->onDelete('cascade');
             $table->foreignId('payment_status_id')->constrained('payment_statuses')->onDelete('cascade');
             $table->decimal('amount', 8, 2);  // The amount paid
             $table->date('payment_date');     // Date of payment
@@ -24,9 +24,8 @@ return new class extends Migration
         $Payments = [
 
             [
-                'appointment_service_id' => 1,   // The ID of the service paid for
+                'appointment_id' => 1,   // The ID of the service paid for
                 'payment_status_id' => 2,         // The ID of the payment status ("Completed")
-                'amount' => 1000.00,              // The amount paid
                 'payment_date' => '2025-05-09',   // The date of the payment
             ]
 

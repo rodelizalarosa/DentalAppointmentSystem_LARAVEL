@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\AppointmentService;
+use App\Models\AppointmentServices;
+use App\Models\DentalService;
 
 class AppointmentServiceController extends Controller
 {
@@ -21,8 +22,12 @@ class AppointmentServiceController extends Controller
             'appointment_id' => 'required|exists:appointments,id',
             'dental_service_id' => 'required|exists:dental_services,id',
             'treatment_status_id' => 'required|exists:treatment_statuses,id',
-            'total_cost' => 'required|numeric|min:0',
+            // no total_cost input needed, we calculate it
         ]);
+
+        // Fetch cost from the dental service
+        $service = DentalService::findOrFail($validated['dental_service_id']);
+        $validated['total_cost'] = $service->cost;
 
         $appointmentService = AppointmentServices::create($validated);
 
@@ -41,8 +46,12 @@ class AppointmentServiceController extends Controller
             'appointment_id' => 'required|exists:appointments,id',
             'dental_service_id' => 'required|exists:dental_services,id',
             'treatment_status_id' => 'required|exists:treatment_statuses,id',
-            'total_cost' => 'required|numeric|min:0',
+            // no total_cost input needed, we calculate it again in case service changed
         ]);
+
+        // Always re-fetch cost in case dental_service_id was updated
+        $service = DentalService::findOrFail($validated['dental_service_id']);
+        $validated['total_cost'] = $service->cost;
 
         $appointmentService->update($validated);
 

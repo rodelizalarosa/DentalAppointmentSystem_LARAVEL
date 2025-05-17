@@ -26,18 +26,20 @@ return new class extends Migration
                 'appointment_id' => 1, 
                 'dental_service_id' => 1,
                 'treatment_status_id' => 1, //Pending
-                'total_cost' => 1000.00   // matching cost of service
             ],
             [
                 'appointment_id' => 1, 
                 'dental_service_id' => 3,
                 'treatment_status_id' => 1, //Pending
-                'total_cost' => 1200.00
             ],
         ];
 
         foreach ($appointmentServices as $as) {
-            AppointmentServices::create($as);
+            $service = DentalService::find($as['dental_service_id']);
+            if ($service) {
+                $as['total_cost'] = $service->cost;
+                AppointmentServices::create($as);
+            }
         }
 
     }

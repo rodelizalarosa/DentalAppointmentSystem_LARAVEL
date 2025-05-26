@@ -1,72 +1,83 @@
 # Dental Flow (Dental Clinic Appointment System) Laravel-Project
 
-## Features:
-1. Authentication
-	a. Log In
-	b. Register
-	c. Log Out
+## Feature List:
+### 1. Authentication
+- Log In
+- Register
+- Log Out
 
-2. Admin Page
-	2.1 Roles Page
-	   a. Get Roles
-	   b. Add Role
-	   c. Edit Role
-	   d. Delete Role
-	2.2 User Page
-	   a. Get Users 
-	   b. Add User 
-	   c. Edit User 
-	   d. Delete User 
-	2.3 User Status
-	   a. Get User Statuses
-	   b. Add User Status
-	   c. Edit User Status
-	   d. Delete User Status
-	2.4 Patient Information Page
-	   a. Get Patient Informations
-	   b. Add Patient Information
-	   c. Edit Patient Information
-	   d. Archive Patient Information
-	2.5 Doctor Information Page
-	   a. Get Doctor Informations
-	   b. Add Doctor Information
-	   c. Edit Doctor Information
- 	   d. Archive Doctor Information
-	2.6 Dental Service Page
-	   a. Get Dental Services
-	   b. Add Dental Service
-	   c. Edit Dental Service
-	   d. Delete Dental Service
-	2.7 Appointment Page
-	   a. Get Appointments
-	   b. Add Appointment
-	   c. Edit Appointment
-	   d. Delete Appointment
-	2.8 Appointment Status Page
-	   a. Get Appointment Statuses
-	   b. Add Appointment Status
-	   c. Edit Appointment Status
-	   d. Delete Appointment Status
-	2.9 Appointment Services Page
-	   a. Get Appointment Services 
-	   b. Add Appointment Service 
-	   c. Edit Appointment Service
-	   d. Delete Appointment Service 
-	2.10 Treatment Status Page
-	   a. Get Treatment Statuses
-	   b. Add Treatment Status
-	   c. Edit Treatment Status
-	   d. Delete Treatment Status
-	2.11 Payment Page
-	   a. Get Payments
-	   b. Add Payment 
-	   c. Edit Payment 
-	   d. Delete Payment 
-	2.12 Payment Status
-	   a. Get Payment Statuses
-	   b. Add Payment Status
-	   c. Edit Payment Status
-	   d. Delete Payment Status
+### 2. Admin Page
+#### 2.1 Roles Page
+- Get Roles
+- Add Role
+- Edit Role
+- Delete Role
+
+#### 2.2 User Page
+- Get Users
+- Add User
+- Edit User
+- Delete User
+
+#### 2.3 User Status
+- Get User Statuses
+- Add User Status
+- Edit User Status
+- Delete User Status
+
+#### 2.4 Patient Information Page
+- Get Patient Informations
+- Add Patient Information
+- Edit Patient Information
+- Archive Patient Information
+
+#### 2.5 Doctor Information Page
+- Get Doctor Informations
+- Add Doctor Information
+- Edit Doctor Information
+- Archive Doctor Information
+
+#### 2.6 Dental Service Page
+- Get Dental Services
+- Add Dental Service
+- Edit Dental Service
+- Delete Dental Service
+
+#### 2.7 Appointment Page
+- Get Appointments
+- Add Appointment
+- Edit Appointment
+- Delete Appointment
+
+#### 2.8 Appointment Status Page
+- Get Appointment Statuses
+- Add Appointment Status
+- Edit Appointment Status
+- Delete Appointment Status
+
+#### 2.9 Appointment Services Page
+- Get Appointment Services
+- Add Appointment Service
+- Edit Appointment Service
+- Delete Appointment Service
+
+#### 2.10 Treatment Status Page
+- Get Treatment Statuses
+- Add Treatment Status
+- Edit Treatment Status
+- Delete Treatment Status
+
+#### 2.11 Payment Page
+- Get Payments
+- Add Payment
+- Edit Payment
+- Delete Payment
+
+#### 2.12 Payment Status
+- Get Payment Statuses
+- Add Payment Status
+- Edit Payment Status
+- Delete Payment Status
 
 
 ## Prerequisites
@@ -148,3 +159,4 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
